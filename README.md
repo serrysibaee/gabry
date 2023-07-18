@@ -12,4 +12,4 @@ This is a basic implementation of matrix and vectors library to make it understa
 ## Using gabry library (examples)
 
 
-## Using gabry library (examples)
+## Using Aqwa library (examples)
