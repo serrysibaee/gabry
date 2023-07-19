@@ -86,15 +86,15 @@ class Masfofah:
             print('\n')
 
 
-masfofah_1 = Masfofah([[1, 2, 3],
-                       [4, 5, 6],
-                       [1, 2, 3]])
+# masfofah_1 = Masfofah([[1, 2, 3],
+#                        [4, 5, 6],
+#                        [1, 2, 3]])
 
 # print(masfofah_1.sum(axis=0))
-print(masfofah_1.sum(axis=0).man8ool().shape)
-print(masfofah_1)
-masfofah_1_T = masfofah_1.man8ool()
-print(masfofah_1_T)
+# print(masfofah_1.sum(axis=0).man8ool().shape)
+# print(masfofah_1)
+# masfofah_1_T = masfofah_1.man8ool()
+# print(masfofah_1_T)
 # masfofah_2 = Masfofah([[1, 2, 3],
 #                      [4, 5, 6],
 #                      [1, 2, 3]])

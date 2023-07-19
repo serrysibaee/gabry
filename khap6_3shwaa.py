@@ -45,11 +45,11 @@ def generator(seed:int):
 
     number = 0
 
-    for _ in range(1000):
-        number = (a*Xn + c)%m
-        print(number)
-        Xn = number
+    # for _ in range(1000):
+    #     number = (a*Xn + c)%m
+    #     print(number)
+    #     Xn = number
 
-    return number
+    # return number
 
-print(generator(10000))
+# print(generator(10000))
