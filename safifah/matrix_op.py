@@ -7,7 +7,7 @@ class Safifah:
         self.rows = rows
         self.columns = columns
         self.masfofah = (rows * columns) * [0]
-        self.majmoo3 = rows * columns
+        self.total = rows * columns
 
     def lookup(self, i, j):
         return self.masfofah[i*self.columns + j]
@@ -16,56 +16,59 @@ class Safifah:
         self.masfofah[i*self.columns + j] = value
 
     def kolleh(self):
-        return self.majmoo3
+        return self.total
 
-    def lkhbetha(self):
+    def randomize(self):
         self.masfofah = [round(random.random(), 7)
-                         for _ in range(self.majmoo3)]
+                         for _ in range(self.total)]
         return None
 
-    def lkhbeth_b7d(self, aql: int, a3la: int):
-        self.masfofah = [(round(random.random(), 7)*(a3la-aql)+aql)
-                         for _ in range(self.majmoo3)]
+    def randomize_bounded(self, min: int, max: int):
+        self.masfofah = [(round(random.random(), 7)*(max-min)+min)
+                         for _ in range(self.total)]
 
-    def lkhbetha(self):
-        self.masfofah = [round(random.random(), 7)
-                         for _ in range(self.majmoo3)]
 
-    def print_safifah(self) -> str:
+
+    def print_safifah(self,name) -> str:
+        print(f"{name}:[")
         for i in range(self.rows):
             for j in range(self.columns):
-                print(self.lookup(i, j), end=" ")
+                print(self.lookup(i, j), end="\t")
             print()
+        print("]")
 
 
-def lkhbet_safifah(safifah):
-    safifah.lkhbetha()
+def randomize_safifah(safifah):
+    safifah.randomize()
     return None
 
 
-def lkhbet_safifah_b7d(safifah, aql, a3la):
-    safifah.lkhbeth_b7d(3, 10)
+def random_safifah_bound(safifah, min, max):
+    safifah.randomize_bounded(3, 10)
     return None
 
 
-def jam3(saf1, saf2):
+def print_safifah(safifah,name:str=""):
+    safifah.print_safifah(name)
+
+def add(saf1, saf2):
     """first safifah is the one will be add on from the second safifah"""
     assert saf1.rows == saf2.rows
     assert saf1.columns == saf2.columns
-    for i in range(saf1.majmoo3):
+    for i in range(saf1.total):
         saf1.masfofah[i] += saf2.masfofah[i]
 
     return None
 
 
-def t3bba(saf, raqm: int):
-    for i in range(saf.majmoo3):
+def fill(saf, raqm: int):
+    for i in range(saf.total):
         saf.masfofah[i] = raqm
 
     return None
 
 
-def jodaa(saf_jadid, saf1, saf2):
+def dot(saf_jadid, saf1, saf2):
     # s1 (a,b) s2 (b,c) j (a,c)
     assert saf1.columns == saf2.rows  # b = b
     assert saf_jadid.rows == saf1.rows  # s1.a = j.a
@@ -80,3 +83,11 @@ def jodaa(saf_jadid, saf1, saf2):
                 now_val = saf_jadid.lookup(i, j)
                 new_val = now_val + (saf1.lookup(i, k) * saf2.lookup(k, j))
                 saf_jadid.change_at(i, j, new_val)
+
+def sigmoid(z):
+    from math import e 
+    return (1/(1+e**-z))
+
+def sigmoid_saf(saf):
+    for i in range(saf.total):
+        saf.masfofah[i] = sigmoid(saf.masfofah[i])
