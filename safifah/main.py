@@ -30,8 +30,7 @@ a1 = Safifah(1,2)
 
 w2 = Safifah(2,1)
 b2 = Safifah(1,1) 
-
-a2 = Safifah(2,1)
+a2 = Safifah(1,1) # a*w2 + b2 
 # randomize the weights
 
 random_safifah_bound(w1,5,10)
@@ -49,10 +48,15 @@ random_safifah_bound(b2,5,10)
 # print_safifah(b2,"b2")
 
 # forwading 
-sfx = Safifah(3,3)
-fill(sfx,4)
-print_safifah(sfx)
-sigmoid_saf(sfx)
-print_safifah(sfx)
-# dot(a1,w1,x)
-# add(a1,b1)
+
+dot(a1,w1,x)
+add(a1,b1)
+sigmoid_saf(a1)
+
+dot(a2,a1,w2)
+add(a2,b2)
+sigmoid_saf(a2)
+
+# to get y 
+y = a2.derefrence()
+

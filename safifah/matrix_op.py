@@ -9,6 +9,11 @@ class Safifah:
         self.masfofah = (rows * columns) * [0]
         self.total = rows * columns
 
+    def __iter__(self):
+        for i in range(len(self.masfofah)):
+
+            yield self.masfofah
+
     def lookup(self, i, j):
         return self.masfofah[i*self.columns + j]
 
@@ -89,5 +94,6 @@ def sigmoid(z):
     return (1/(1+e**-z))
 
 def sigmoid_saf(saf):
-    for i in range(saf.total):
-        saf.masfofah[i] = sigmoid(saf.masfofah[i])
+    for i in range(saf.rows):
+        for j in range(saf.columns):
+            saf.change_at(i,j,sigmoid(saf.lookup(i,j))) 
