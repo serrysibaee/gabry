@@ -19,13 +19,15 @@ from matrix_op import *
 # print_safifah(sf3)
 
 ### Building XOR example
+x1 = 0
+x2 = 1
 x = Safifah(1,2)
-x.change_at(0,0,0) 
-x.change_at(0,1,1)
+x.change_at(0,0,x1) 
+x.change_at(0,1,x2)
+
 
 w1 = Safifah(2,2)
 b1 = Safifah(1,2)
-
 a1 = Safifah(1,2)
 
 w2 = Safifah(2,1)

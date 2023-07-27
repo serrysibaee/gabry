@@ -11,8 +11,11 @@ class Safifah:
 
     def __iter__(self):
         for i in range(len(self.masfofah)):
-
             yield self.masfofah
+
+    def derefrence(self):
+        return float(*self.masfofah)
+    
 
     def lookup(self, i, j):
         return self.masfofah[i*self.columns + j]
