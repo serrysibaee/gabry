@@ -60,5 +60,8 @@ add(a2,b2)
 sigmoid_saf(a2)
 
 # to get y 
-y = a2.derefrence()
+# we got two ways either using the dereference function
+# y = a2.derefrence()
+# or using the * like this 
+y = float(*a2.masfofah)
 
