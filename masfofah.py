@@ -18,8 +18,8 @@ class Masfofah:
         return len(self.masfofah)
 
     def __add__(self, other):
-        assert self.shape()[0] == other.shape()[0] and self.shape()[
-            1] == other.shape()[1], "not the same size"
+        assert self.shape[0] == other.shape[0] and self.shape[
+            1] == other.shape[1], "not the same size"
         adder = []
         for index in range(len(self.masfofah)):
             adder.append(self.masfofah[index] + other.masfofah[index])
@@ -27,7 +27,7 @@ class Masfofah:
         return Masfofah(adder)
 
     def __mul__(self, other):
-        assert self.shape()[1] == other.shape()[0]
+        assert self.shape[1] == other.shape[0]
         # this is a dot product multiplication of masfofah and other
         multiplier = []
         for row in self.masfofah:
@@ -39,11 +39,13 @@ class Masfofah:
         return Masfofah(multiplier)
 
     def __sub__(self, other):
-        assert self.shape()[0] == other.shape()[0] and self.shape()[
-            1] == other.shape()[1], "not the same size"
+        assert self.shape[0] == other.shape[0] and self.shape[
+            1] == other.shape[1], "not the same size"
         subber = []
         for index in range(len(self.masfofah)):
             subber.append(self.masfofah[index] - other.masfofah[index])
+        
+        return Masfofah(subber)
 
     def __getitem__(self, place):
         return self.masfofah[place]
