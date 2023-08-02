@@ -11,6 +11,12 @@ This is a basic implementation of matrix and vectors library to make it understa
 
 ## Using gabry library (examples)
 
+1. to download the gabry library just clone this repository
+
+```
+git clone https://github.com/serrysibaee/gabry.git 
+```
+
 
 
 
