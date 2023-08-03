@@ -132,8 +132,16 @@ class Sho3a3:
             jam3 += element
         return jam3
 
-# sho3a3_1 = Sho3a3([1, 2, 3,30, 4,20, 5.1001])
+    def element_wise_product(self, other):
+        for i in range(len(self)):
+            self.sho3a3[i] *= other.sho3a3[i]
 
+
+# sho3a3_1 = Sho3a3([1, 2, 3,30, 4,20, 5.1001])
+# sho3a3_2 = Sho3a3([1, 2, 3,30, 4,20, 5.1001])
+# print(sho3a3_1)
+# sho3a3_1.element_wise_product(sho3a3_2)
+# print(sho3a3_1)
 # print(sho3a3_1.sum())
 # sho3a3_2 = Sho3a3([1.1, 2, 3, 4, 5])
 # for num in sho3a3_1:

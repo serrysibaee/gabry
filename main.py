@@ -19,11 +19,6 @@ masf1 = i9n3_masfofatan(list1)
 masf2 = i9n3_masfofatan(list2)
 
 
-# print(masf1 + masf2)
-# print(masf1 - masf2)
-# print(masf1 * masf2.man8ool()) # this is dot product 
+iden_mas = identity_masfofah(3)
 
-# print(masf1.sum(0))
-# print(masf1.sum(1))
-
-print(masf1.shape)
+print(iden_mas)
