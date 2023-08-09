@@ -4,7 +4,7 @@ from sho3a3 import Sho3a3
 class Masfofah:
     def __init__(self, sho3a3s: list[float]):
         self.masfofah = [Sho3a3(row) for row in sho3a3s]
-        self.shape = self.shape()
+        self.shaper = self.shape()
 
     def __repr__(self) -> str:
         return "masfofah:\n"+"\n".join(str(mas.sho3a3) for mas in self.masfofah)+"\n"
@@ -80,6 +80,20 @@ class Masfofah:
     def man8ool(self):
         return self.extract_columns()
 
+    
+    # adding and removing columns and rows
+    def add(self,other, axis=0):
+        # make sure that the size of the new input is correct
+        if axis == 0:
+            for i in range(len(self.masfofah)):
+                self.masfofah[i].sho3a3.extend(other.masfofah[i].sho3a3)
+        if axis == 1: 
+            self.masfofah.extend(other.masfofah)
+        pass
+
+    def remove(self,other,axis=0):
+        pass 
+    
     # we could take rid of this function
     def print_columns(self):
         for i in range(len(self.masfofah[0].sho3a3)):
@@ -87,10 +101,28 @@ class Masfofah:
                 print(self.masfofah[j].sho3a3[i], end=" ")
             print('\n')
 
+    
 
-# masfofah_1 = Masfofah([[1, 2, 3],
-#                        [4, 5, 6],
-#                        [1, 2, 3]])
+
+masfofah_1 = Masfofah([[1, 2, 3],
+                       [4, 5, 6],
+                       [1, 2, 3]])
+masfofah_2 = Masfofah([[1, 2, 3],
+                       [4, 5, 6],
+                       [1, 2, 3]])
+
+masfofah_1.add(masfofah_2 , axis=0)
+print(masfofah_1.shape())
+
+
+masfofah_1 = Masfofah([[1, 2, 3],
+                       [4, 5, 6],
+                       [1, 2, 3]])
+masfofah_2 = Masfofah([[1, 2, 3],
+                       [4, 5, 6],
+                       [1, 2, 3]])
+masfofah_1.add(masfofah_2 , axis=1)
+print(masfofah_1.shape())
 
 # print(masfofah_1.sum(axis=0))
 # print(masfofah_1.sum(axis=0).man8ool().shape)
