@@ -98,7 +98,7 @@ print(rand_mat)
 #### some things to add in the future inshaa Allah
 1. inverse function 
 2. element wise product (done see in gabry elementwise_product() function)
-3. Building pip library for gabry 
+3. Building pip library for gabry (It's more fancy way but you can use the library by just clone the repository)
 4. vectors cross product and norm (NOTE: you can do them by your self as a practice for reminding you see this link [link](https://minireference.com/static/tutorials/linear_algebra_in_4_pages.pdf))
 5. complete the random library khap6_3shwaa (for refrence see the book numerical recipes chapter 7 (page 340)) {DONE}
 
