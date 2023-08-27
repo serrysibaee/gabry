@@ -78,10 +78,21 @@ print(masf1.shape)
 # transpose
 print(masf1.man8ool())
 
-# summation (0 is for rows and 1 is for columns)
+# summation (0 is for rows and 1 is for columns) but it will always return them as a vector
 print(masf1.sum(axis=0))
 print(masf1.sum(axis=1))
 ```
+
+#### some basic of random functions: 
+the library khap6_3shwaa is a random number generator that has been added to gabry
+```python
+
+rand_mat_int = random_matrix_int(3,3)
+print(rand_mat)
+rand_mat = random_matrix(3,3)
+print(rand_mat)
+```
+
 
 
 #### some things to add in the future inshaa Allah
@@ -89,7 +100,7 @@ print(masf1.sum(axis=1))
 2. element wise product (done see in gabry elementwise_product() function)
 3. Building pip library for gabry 
 4. vectors cross product and norm (NOTE: you can do them by your self as a practice for reminding you see this link [link](https://minireference.com/static/tutorials/linear_algebra_in_4_pages.pdf))
-5. complete the random library khap6_3shwaa (for refrence see the book numerical recipes chapter 7 (page 340))
+5. complete the random library khap6_3shwaa (for refrence see the book numerical recipes chapter 7 (page 340)) {DONE}
 
 
 ##### For any notes and suggested please contact me at my email " serrymrss@gmail.com " 

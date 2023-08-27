@@ -1,7 +1,7 @@
 # code for the new library
 import typing
 from masfofah import Masfofah
-
+from khap6_3shwaa import Generator
 # جداء
 # العمليات الأساسية منها ضرب المصفوفات وطرحها وجمعها
 
@@ -45,10 +45,34 @@ def masfofah_inverse(masf):
     pass
 
 
+
+
 # others 
 # similar vectors by the paper 
 # see 4pages linear algebra pdf 
 
+########################################################################
+gen = Generator()
+def get_random():
+    # return a random number (0,1)
+    return gen.random_norm()
+def get_random_int():
+    return gen.random_int()
 
-# print(masfofah_asfar(3,1))
-# print(masfofah_wahidat(3,1))
+def random_matrix(rows,columns):
+    ret = []
+    for ind in range(rows):
+        row = []
+        for indc in range(columns):
+            row.append(get_random())
+        ret.append(row)
+    return Masfofah(ret)
+
+def random_matrix_int(rows,columns):
+    ret = []
+    for ind in range(rows):
+        row = []
+        for indc in range(columns):
+            row.append(get_random_int())
+        ret.append(row)
+    return Masfofah(ret)

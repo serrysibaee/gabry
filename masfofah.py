@@ -104,25 +104,25 @@ class Masfofah:
     
 
 
-masfofah_1 = Masfofah([[1, 2, 3],
-                       [4, 5, 6],
-                       [1, 2, 3]])
-masfofah_2 = Masfofah([[1, 2, 3],
-                       [4, 5, 6],
-                       [1, 2, 3]])
+# masfofah_1 = Masfofah([[1, 2, 3],
+#                        [4, 5, 6],
+#                        [1, 2, 3]])
+# masfofah_2 = Masfofah([[1, 2, 3],
+#                        [4, 5, 6],
+#                        [1, 2, 3]])
 
-masfofah_1.add(masfofah_2 , axis=0)
-print(masfofah_1.shape())
+# masfofah_1.add(masfofah_2 , axis=0)
+# print(masfofah_1.shape())
 
 
-masfofah_1 = Masfofah([[1, 2, 3],
-                       [4, 5, 6],
-                       [1, 2, 3]])
-masfofah_2 = Masfofah([[1, 2, 3],
-                       [4, 5, 6],
-                       [1, 2, 3]])
-masfofah_1.add(masfofah_2 , axis=1)
-print(masfofah_1.shape())
+# masfofah_1 = Masfofah([[1, 2, 3],
+#                        [4, 5, 6],
+#                        [1, 2, 3]])
+# masfofah_2 = Masfofah([[1, 2, 3],
+#                        [4, 5, 6],
+#                        [1, 2, 3]])
+# masfofah_1.add(masfofah_2 , axis=1)
+# print(masfofah_1.shape())
 
 # print(masfofah_1.sum(axis=0))
 # print(masfofah_1.sum(axis=0).man8ool().shape)
